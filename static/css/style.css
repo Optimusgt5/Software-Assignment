@@ -1,5 +1,4 @@
-@import
-url("https://fonts.googleapis.com/css?family=Nunito :400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
 
 * {
     padding: 0;
@@ -31,7 +30,7 @@ main {
 nav {
     overflow: hidden;
     background-color: #333;
-    text-align: center;
+    text-align: center; 
 }
 
 nav a {
@@ -49,8 +48,8 @@ nav a:hover {
 }
 
 nav a.active {
-    background-color: #04aa6d;
-    column-rule-color: white;
+    background-color: #04AA6D;
+    color: white;
 }
 
 .container {
@@ -80,8 +79,7 @@ nav a.active {
     color: white;
 }
 
-input[type=text], input[type="password"], input[type="date"],
-input[type="number"], select {
+input[type=text], input[type="password"], input[type="date"], input[type="number"], select {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -93,7 +91,7 @@ input[type="number"], select {
 
 input[type=submit] {
     width: 100%;
-    background-color: #4caf50;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
@@ -104,11 +102,11 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-    background-color: #4caf50;
+    background-color: #45a049;
 }
 
 button {
-    background-color: #4caf50;
+    background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;

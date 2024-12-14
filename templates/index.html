@@ -16,8 +16,7 @@
     <thead>
         <th>Date</th>
         <th>User who guessed</th>
-        <th>Game</th>
-        <th>Movie</th>
+        <th>Game/Movie</th>
         <th>Score</th>
     </thead>
 
@@ -26,8 +25,7 @@
         <tr>
             <td>{{ guess['date'] }}</td>
             <td>{{ guess['username'] }}</td>
-            <td>{{ guess['game'] }}</td>
-            <td>{{ guess['movie']}}</td>
+            <td>{{ guess['Media'] }}</td>
             <td>{{ guess['score'] }}</td>
         </tr>
         {% endfor %}
@@ -36,7 +34,3 @@
 </table>
 
 {% endblock %}
-
-<head>
-    <link rel="stylesheet" href="styles.css">
-  </head>
