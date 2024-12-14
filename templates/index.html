@@ -7,6 +7,12 @@
     <p>Welcome to the Game and Movie Reviewer. This website is all about reviewing either games or movies. Just write a review of anything that's either a game or a movie as well as your comments about it and everyone else will be able to see it.
 <a href="https://GameAndMovieReviewer">GameAndMovieReviewer</a>
 
+
+{% if session['username'] %}
+        <br>
+        <p>Hello {{ session['username'] }}</p>
+    {% endif %}
+
 </div>
 
 <br>
@@ -15,7 +21,7 @@
 
     <thead>
         <th>Date</th>
-        <th>User who guessed</th>
+        <th>Reviewer</th>
         <th>Game/Movie</th>
         <th>Score</th>
     </thead>
