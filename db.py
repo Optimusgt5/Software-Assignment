@@ -13,7 +13,7 @@ def GetAllGuesses():
 
     # Connect, query all guesses and then return the data
     db = GetDB()
-    guesses = db.execute("SELECT * FROM Guesses").fetchall()
+    guesses = db.execute("SELECT * FROM Guesses JOIN Users on Guesses.user_id = Users.id").fetchall()
     db.close()
     return guesses
 
@@ -33,3 +33,31 @@ def CheckLogin(username, password):
         
     # If we get here, the username or password failed.
     return None
+
+def RegisterUser(username, password):
+
+    # Check if they gave us a username and password
+    if username is None or password is None:
+        return False
+
+    # Attempt to add them to the database
+    db = GetDB()
+    hash = generate_password_hash(password)
+    db.execute("INSERT INTO Users(username, password) VALUES(?, ?)", (username, hash,))
+    db.commit()
+
+    return True
+
+def AddGuess(user_id, date, game, score):
+   
+    # Check if any boxes were empty
+    if date is None or game is None:
+        return False
+   
+    # Get the DB and add the guess
+    db = GetDB()
+    db.execute("INSERT INTO Guesses(user_id, date, game, score) VALUES(?, ?, ?, ?)",
+               (user_id, date, game, score,))
+    db.commit()
+
+    return True

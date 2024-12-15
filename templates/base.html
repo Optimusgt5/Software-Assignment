@@ -20,8 +20,12 @@
     <!-- Include a navigation menu -->
      <nav>
         <a href="/">Home</a>
-        <a href="/login">Login</a>
-        <a href="/register">Register</a>
+        {% if not session['username'] %}
+            <a href="/login">Login</a>
+            <a href="/register">Register</a>
+        {% else %}
+            <a href="/logout">Logout</a>
+        {% endif %}
     </nav>
 
     <!-- This Section will contain page content -->

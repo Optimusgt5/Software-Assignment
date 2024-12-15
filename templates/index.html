@@ -11,6 +11,7 @@
 {% if session['username'] %}
         <br>
         <p>Hello {{ session['username'] }}</p>
+        <a href="/add"><button>Make a Review</button></a>
     {% endif %}
 
 </div>
@@ -31,7 +32,7 @@
         <tr>
             <td>{{ guess['date'] }}</td>
             <td>{{ guess['username'] }}</td>
-            <td>{{ guess['Media'] }}</td>
+            <td>{{ guess['game'] }}</td>
             <td>{{ guess['score'] }}</td>
         </tr>
         {% endfor %}
