@@ -34,6 +34,7 @@ def CheckLogin(username, password):
             return user
         
     # If we get here, the username or password failed.
+    db.close()
     return None
 
 def RegisterUser(username, password):
@@ -47,7 +48,7 @@ def RegisterUser(username, password):
     hash = generate_password_hash(password)
     db.execute("INSERT INTO Users(username, password) VALUES(?, ?)", (username, hash,))
     db.commit()
-
+    db.close()
     return True
 
 def AddGuess(user_id, date, game, score):
@@ -61,5 +62,5 @@ def AddGuess(user_id, date, game, score):
     db.execute("INSERT INTO Guesses(user_id, date, game, score) VALUES(?, ?, ?, ?)",
                (user_id, date, game, score,))
     db.commit()
-
+    db.close()
     return True

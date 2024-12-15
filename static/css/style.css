@@ -7,7 +7,7 @@
 }
 
 body {
-    background: #fdfdfd;
+    background: #5380e2;
     font-family: "Nunito", sans-serif;
     font-size: 1rem;
 }
@@ -22,20 +22,20 @@ main {
 .banner {
     padding: 60px;
     text-align: center;
-    background: #1abc9c;
+    background: #021146;
     color: white;
     font-size: 3em;
 }
 
 nav {
     overflow: hidden;
-    background-color: #333;
+    background-color: #8241d6;
     text-align: center; 
 }
 
 nav a {
     display: inline-block;
-    color: #f2f2f2;
+    color: #ffffff;
 
     padding: 14px 16px;
     text-decoration: none;
@@ -43,8 +43,8 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #ddd;
-    color: black;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
 }
 
 nav a.active {
@@ -63,20 +63,20 @@ nav a.active {
 }
 
 .guess_table td, .guess_table th {
-    border: 1px solid #ddd;
+    border: 1px solid #000000;
     padding: 8px;
 }
 
-.guess_table tr:nth-child(even){background-color: #f2f2f2;}
+.guess_table tr:nth-child(even){background-color: #a71616;}
 
-.guess_table tr:hover {background-color: #ddd;}
+.guess_table tr:hover {background-color: #e6d331;}
 
 .guess_table th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
-    background-color: #1abc9c;
-    color: white;
+    background-color: #023d1a;
+    color: rgb(255, 255, 255);
 }
 
 input[type=text], input[type="password"], input[type="date"], input[type="number"], select {
@@ -84,7 +84,7 @@ input[type=text], input[type="password"], input[type="date"], input[type="number
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #9c3232;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -106,7 +106,7 @@ input[type=submit]:hover {
 }
 
 button {
-    background-color: #4CAF50;
+    background-color: #4811a0;
     color: white;
     padding: 14px 20px;
     margin: 8px 0;
